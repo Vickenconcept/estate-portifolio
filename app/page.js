@@ -2,12 +2,24 @@
 import Image from "next/image";
 import CustomCard from '@/components/CustomCard';
 import properties from '@/jsonFiles/properties';
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <section class="w-full">
-        <div class="w-full h-[520px] bg-[url('https://images.unsplash.com/photo-1449844908441-8829872d2607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxob21lfGVufDB8MHx8fDE3MTA0MDE1NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center ">
+        <div class="relative w-full h-[520px] bg-[url('https://images.unsplash.com/photo-1449844908441-8829872d2607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxob21lfGVufDB8MHx8fDE3MTA0MDE1NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center ">
+          <nav class="bg-gray-800 p-2 bg-opacity-40 font-sen text-white space-x-2 uppercase text-lg lg:flex items-center hidden absolute top-0 right-0">
+            <Link href="/dashboard" class="py-2 px-4 flex border-b border-orange-500">
+              Dashboard
+            </Link>
+            <Link href="/register" class="py-2 px-4 flex border-b border-orange-500">
+              Register
+            </Link>
+            <Link href="/login" class="py-2 px-4 flex border-b border-orange-500">
+              Login
+            </Link>
+          </nav>
           <div>
             <h1 class="text-white text-center xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl font-semibold bg-gray-800 p-2 bg-opacity-40 rounded-sm">Discover Your New Dream</h1>
           </div>
@@ -31,9 +43,9 @@ export default function Home() {
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
             </svg>
 
-            <span>Hot Deal</span>
+            <span className="font-bold">Hot Deal</span>
           </h3>
-          <div className="w-full grid md:grid-cols-3 gap-5 md:w-[90%]">
+          <div className="w-full grid md:grid-cols-3 gap-5 ">
             {properties.map((property) => (
               <CustomCard
                 key={property.id}

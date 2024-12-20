@@ -1,86 +1,101 @@
-// import Form from 'next/form'
 
-import {
-  Button,
-  Checkbox,
-  FileInput,
-  Label,
-  Radio,
-  RangeSlider,
-  Select,
-  Textarea,
-  TextInput,
-  ToggleSwitch,
-} from "flowbite-react";
 import Link from 'next/link'
 
 export default function Page() {
   return (
 
-    <div className="bg-gray-100 min-h-screen flex box-border justify-center items-center">
-      <div className="bg-[#dfa674] rounded-2xl flex max-w-3xl p-5 items-center">
-        <div className="md:w-1/2 px-8">
-          <h2 className="font-bold text-3xl text-[#002D74]">Register</h2>
+    <div className="bg-gray-900 min-h-screen flex box-border justify-center items-center">
 
-          <form action="" className="flex flex-col gap-4">
-            <TextInput className="mt-8 rounded-xl border" type="email" name="email" placeholder="Email" />
-            <div className="relative">
-              <TextInput className=" rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password" />
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
-                className="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer z-20 opacity-100"
-                viewBox="0 0 16 16">
-                <path
-                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
-                </path>
-                <path
-                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
-                </path>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                className="bi bi-eye-slash-fill absolute top-1/2 right-3 -z-1 -translate-y-1/2 cursor-pointer hidden"
-                id="mama" viewBox="0 0 16 16">
-                <path
-                  d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z">
-                </path>
-                <path
-                  d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z">
-                </path>
-              </svg>
+      <div className="mx-auto container flex items-center" id="nav">
+        <div className="w-full pt-2 p-4">
+
+          <div className="mx-auto md:p-6 md:w-2/5">
+            <div className="flex flex-wrap justify-between">
+              <h1 className="text-2xl text-orange-500 hover:text-orange-500 transition duration-500 p-4">
+                <i className="fas fa-sign-in-alt fa-fw fa-lg"></i>
+                Sign-Up
+              </h1>
+              <Link href="/" className="mt-8 text-orange-400 hover:text-orange-600 transition duration-500">
+                <svg className=" w-6 h-6 inline-block align-bottom" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                Back to Home
+                <i className="fas fa-chevron-circle-left fa-fw"></i>
+              </Link>
             </div>
-            <div className="relative">
-              <TextInput className=" rounded-xl border w-full" type="password" name="password" id="password" placeholder="Confirm password" />
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
-                className="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer z-20 opacity-100"
-                viewBox="0 0 16 16">
-                <path
-                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
-                </path>
-                <path
-                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
-                </path>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                className="bi bi-eye-slash-fill absolute top-1/2 right-3 -z-1 -translate-y-1/2 cursor-pointer hidden"
-                id="mama" viewBox="0 0 16 16">
-                <path
-                  d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z">
-                </path>
-                <path
-                  d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z">
-                </path>
-              </svg>
+
+            <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <form method="POST" action="#login">
+                <div className="mb-8">
+                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+                    Email
+                    <span className="text-red-500">&nbsp;*</span>
+                  </label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <input id="email" className="  outline-none block pr-10 shadow appearance-none border-2 border-orange-100 rounded w-full py-2 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-orange-500 transition duration-500 ease-in-out" placeholder="you@example.com" />
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+                    Password
+                    <span className="text-red-500">&nbsp;*</span>
+                  </label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <input name="password" id="password" type="text" className="outline-none block pr-10 shadow appearance-none border-2 border-orange-100 rounded w-full py-2 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-orange-500 transition duration-500 ease-in-out" />
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+                    Confirm Password
+                    <span className="text-red-500">&nbsp;*</span>
+                  </label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <input name="password" id="password" type="text" className="outline-none block pr-10 shadow appearance-none border-2 border-orange-100 rounded w-full py-2 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-orange-500 transition duration-500 ease-in-out" />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <label className="block text-gray-500 font-bold" htmlFor="remember">
+                        <input className=" mr-2 w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 focus:ring-2 " type="checkbox" id="remember" name="remember" />
+                        <span className="text-sm">
+                          Remember me
+                        </span>
+                      </label>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div className="mb-4 text-center">
+                  <button className="transition grow w-full duration-500 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Sign Up
+                  </button>
+                </div>
+                <hr />
+                <div className="mt-8">
+                  <p className="text-sm space-x-1">
+                    Already Have An Account?
+                    <Link href="/login" className="font-bold text-sm text-orange-500 hover:text-orange-800 hover:underline" >
+                      Sign in
+                    </Link>
+                  </p>
+                </div>
+              </form>
+
+
             </div>
-            <Button className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" type="submit">Register</Button>
-          </form>
-
-
-          <div className="mt-4 text-sm flex justify-between items-center container-mr">
-            <p className="mr-3 md:mr-0 ">Aleady have an account?</p>
-            <Link href="/login" className="hover:border register text-white bg-[#002D74] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Login</Link>
           </div>
-        </div>
-        <div className="md:block hidden w-1/2">
-          <img className="rounded-2xl max-h-[1600px]" src="https://images.unsplash.com/photo-1552010099-5dc86fcfaa38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxmcmVzaHxlbnwwfDF8fHwxNzEyMTU4MDk0fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="login form image" />
         </div>
       </div>
     </div>

@@ -1,17 +1,4 @@
-// import Form from 'next/form'
 
-import {
-  Button,
-  Checkbox,
-  FileInput,
-  Label,
-  Radio,
-  RangeSlider,
-  Select,
-  Textarea,
-  TextInput,
-  ToggleSwitch,
-} from "flowbite-react";
 import Link from 'next/link'
 
 export default function Page() {
@@ -38,15 +25,15 @@ export default function Page() {
             <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <form method="POST" action="#login">
                 <div className="mb-8">
-                  <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">
-                    Username
+                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+                    Email
                     <span className="text-red-500">&nbsp;*</span>
                   </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                       <svg className="h-5 w-5 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                     </div>
-                    <input id="username" className="  outline-none block pr-10 shadow appearance-none border-2 border-orange-100 rounded w-full py-2 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-orange-500 transition duration-500 ease-in-out" placeholder="you@example.com" />
+                    <input id="email" className="  outline-none block pr-10 shadow appearance-none border-2 border-orange-100 rounded w-full py-2 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-orange-500 transition duration-500 ease-in-out" placeholder="you@example.com" />
                   </div>
                 </div>
 

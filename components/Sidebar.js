@@ -17,14 +17,6 @@ const Sidebar = () => {
                     </span>
                 </div>
                 <ul className="mt-8 space-y-3 ">
-                    {/* <li className="relative">
-                        <Link href="users/all" className="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
-                            <span
-                            ><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg></span
-                            ><span className="">Users</span>
-                        </Link>
-                    </li> */}
                     <li className="relative">
                         <Link href="users/all" className="focus:bg-gray-800 focus:text-white hover:bg-gray-800 hover:bg-opacity-20 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-800 focus:outline-none transition-all duration-300 ease-in-out delay-75">
                             <span>
@@ -58,6 +50,19 @@ const Sidebar = () => {
 
                             </span>
                             <span className="">Properties</span>
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link href="/portfolio" className="focus:bg-gray-800 focus:text-white hover:bg-gray-800 hover:bg-opacity-20 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-800 focus:outline-none transition-all duration-300 ease-in-out delay-75">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+
+
+
+                            </span>
+                            <span className="">Portfolio</span>
                         </Link>
                     </li>
                     <li className="relative">
